@@ -44,26 +44,7 @@ const SlideProduct = ({ ARRAY_IMGS = [], ARRAY_IMG_SMALL = [] }) => {
                     className='hidden md:block md:rounded-md'
                 />
             ))}
-            {/* <img
-                src={ImgProductSmall1}
-                alt=''
-                className='hidden md:block md:rounded-md'
-            />
-            <img
-                src={ImgProductSmall2}
-                alt=''
-                className='hidden md:block md:rounded-md'
-            />
-            <img
-                src={ImgProductSmall3}
-                alt=''
-                className='hidden md:block md:rounded-md'
-            />
-            <img
-                src={ImgProductSmall4}
-                alt=''
-                className='hidden md:block md:rounded-md'
-            /> */}
+
         </section>
     )
 }
