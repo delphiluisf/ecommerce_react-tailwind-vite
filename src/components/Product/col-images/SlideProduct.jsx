@@ -3,7 +3,11 @@ import { useState } from 'react'
 import PrevIcon from '@/components/Icons/PrevIcon'
 import NextIcon from '@/components/Icons/NextIcon'
 
-const SlideProduct = ({ ARRAY_IMGS = [], ARRAY_IMG_SMALL = [] }) => {
+const SlideProduct = ({ 
+    ARRAY_IMGS = [], 
+    ARRAY_IMG_SMALL = [], 
+    isOpenModal = false, 
+    ...props }) => {
     const [index, setIndex] = useState(0)
 
     const handleClickNext = () => {
@@ -14,7 +18,10 @@ const SlideProduct = ({ ARRAY_IMGS = [], ARRAY_IMG_SMALL = [] }) => {
     }
 
     return (
-        <section className='grid md:grid-cols-4 md:gap-4'>
+        <section  {...props}>
+            {
+                isOpenModal && <button>Cerrar</button>
+            }
             <div className='relative col-span-4'>
                 <img
                     src={ARRAY_IMGS[index]}
@@ -44,26 +51,7 @@ const SlideProduct = ({ ARRAY_IMGS = [], ARRAY_IMG_SMALL = [] }) => {
                     className='hidden md:block md:rounded-md'
                 />
             ))}
-            {/* <img
-                src={ImgProductSmall1}
-                alt=''
-                className='hidden md:block md:rounded-md'
-            />
-            <img
-                src={ImgProductSmall2}
-                alt=''
-                className='hidden md:block md:rounded-md'
-            />
-            <img
-                src={ImgProductSmall3}
-                alt=''
-                className='hidden md:block md:rounded-md'
-            />
-            <img
-                src={ImgProductSmall4}
-                alt=''
-                className='hidden md:block md:rounded-md'
-            /> */}
+           
         </section>
     )
 }
