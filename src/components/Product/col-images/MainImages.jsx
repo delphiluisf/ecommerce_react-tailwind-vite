@@ -21,13 +21,17 @@ const MainImages = ({ ARRAY_IMGS, ARRAY_IMG_SMALL }) => {
 
             {/* Componente Modal */}
             {isOpenModal && (
-                <SlideProduct
-                    ARRAY_IMGS={ARRAY_IMGS}
-                    ARRAY_IMG_SMALL={ARRAY_IMG_SMALL}
-                    isOpenModal={isOpenModal}
-                    className='hidden md:absolute md:top-1/2 md:left-1/2 md:grid md:max-w-md md:-translate-x-1/2 md:-translate-y-1/2 md:grid-cols-4 md:gap-4'
-                    handledCloseModal={handledCloseModal}
-                />
+                <div className='h-screen w-full absolute top-0 left-0 bg-gray-900 bg-opacity-70'>
+                    <SlideProduct
+                        ARRAY_IMGS={ARRAY_IMGS}
+                        ARRAY_IMG_SMALL={ARRAY_IMG_SMALL}
+                        isOpenModal={isOpenModal}
+                        className='hidden md:absolute md:top-1/2 md:left-1/2 md:grid 
+                        md:max-w-md md:-translate-x-1/2 md:-translate-y-1/2 md:grid-cols-4 md:gap-4 '
+                        handledCloseModal={handledCloseModal}
+                    />
+
+                </div>
             )}
         </>
     )

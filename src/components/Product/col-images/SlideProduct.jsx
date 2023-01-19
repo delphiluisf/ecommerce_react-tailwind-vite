@@ -32,7 +32,7 @@ const SlideProduct = ({
             {isOpenModal && (
                 <button
                     onClick={handledCloseModal}
-                    className='mb-0 text-right font-bold md:col-span-4'
+                    className='mb-0 text-right font-bold md:col-span-4 text-white hover:text-orange-primary'
                 >
                     X
                 </button>
@@ -79,9 +79,9 @@ const SlideProduct = ({
                         className='hidden md:block md:rounded-md'
                     />
                     <span
-                        className={`absolute top-0 h-full w-full hover:bg-[rgba(255,255,255,0.7)] ${
+                        className={`absolute top-0 h-full w-full hover:bg-[rgba(255,255,255,0.6)] ${
                             i === index &&
-                            'border-4 border-orange-500 bg-[rgba(255,255,255,0.7)]'
+                            'border-2 border-orange-500 bg-[rgba(255,255,255,0.6)]'
                         }`}
                     ></span>
                 </div>
